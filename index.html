@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>...</title>
+<title>Quà bí mật 🎁</title>
 
 <style>
 body{
@@ -12,16 +12,60 @@ body{
     align-items:center;
     height:100vh;
     background:#111;
-    color:#fff;
+    overflow:hidden;
     font-family:Arial;
-    font-size:80px;
+}
+
+#gift{
+    font-size:120px;
+    cursor:pointer;
+    transition:0.3s;
+    user-select:none;
+}
+
+#gift:hover{
+    transform:scale(1.15) rotate(-8deg);
+}
+
+#message{
+    display:none;
+    color:white;
+    font-size:70px;
     font-weight:bold;
+    text-align:center;
+    animation:pop .5s;
+}
+
+@keyframes pop{
+    from{
+        transform:scale(0);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
 }
 </style>
-
 </head>
 
 <body>
-mo la gay
+
+<div id="gift">🎁</div>
+
+<div id="message">
+    mo la gay 🌈
+</div>
+
+<script>
+const gift = document.getElementById("gift");
+const msg = document.getElementById("message");
+
+gift.onclick = () =>{
+    gift.style.display = "none";
+    msg.style.display = "block";
+}
+</script>
+
 </body>
 </html>
